@@ -1,5 +1,6 @@
 package com.sparta.navershopprac.service;
 
+import com.sparta.navershopprac.models.ItemDto;
 import com.sparta.navershopprac.models.Product;
 import com.sparta.navershopprac.models.ProductMypriceRequestDto;
 import com.sparta.navershopprac.models.ProductRepository;
@@ -20,6 +21,14 @@ public class ProductService {
                 () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
         );
         product.update(mypriceRequestDto);
+        return id;
+    }
+
+    public Long updateBySearch(Long id, ItemDto itemDto){
+        Product product = productRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
+        );
+        product.updateByItemDto(itemDto);
         return id;
     }
 }
