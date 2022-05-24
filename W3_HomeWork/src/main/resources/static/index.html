@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="basic.js"></script>
+    <title>나만의 셀렉샵</title>
+</head>
+<body>
+<div class="header">
+    아무내용 게시판
+</div>
+<div class="posts">
+    <div class="posts-register">
+        게시글 등록
+    </div>
+</div>
+
+<!--게시글 등록 및 보여지는 페이지-->
+<section class="main-board">
+    <h1 class="d-none">게시판</h1>
+    <div class="board">
+        <table class="table">
+            <thead class="thead">
+            <tr>
+                <td>id</td>
+                <td>제목</td>
+                <td>글쓴이</td>
+                <td>작성일</td>
+            </tr>
+            </thead>
+            <div class="add-posts">
+                <tbody class="tbody">
+                    <tr>
+                        <td>id</td>
+                        <td>작성자</td>
+                        <td><a href="">제모옥</a></td>
+                        <td>2020-02-02</td>
+                    </tr>
+                </tbody>
+                <tbody class="tbody">
+                    <tr>
+                        <td>id</td>
+                        <td>작성자</td>
+                        <td><a href="">제모옥</a></td>
+                        <td>2020-02-02</td>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+        <div class="page-wrap">
+            <ul class="page-nation">
+                <li><a href="/board/list?p=1">1</a></li>
+                <li><a href="/board/list?p=2">2</a></li>
+                <li><a href="/board/list?p=3">3</a></li>
+                <li><a href="/board/list?p=4">4</a></li>
+                <li><a href="/board/list?p=5">5</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<!--글 등록페이지-->
+<div id="register-area">
+    <!--    <div>-->
+    <!--        <input type="text" id="query">-->
+    <!--        &lt;!&ndash;    <img src="images/icon-search.png" alt="">&ndash;&gt;-->
+    <!--    </div>-->
+    <!--    <div id="search-result-box">-->
+    <!--        <div class="search-itemDto">-->
+    <!--            <div class="search-itemDto-left">-->
+    <!--                <img src="https://shopping-phinf.pstatic.net/main_2399616/23996167522.20200922132620.jpg?type=f300" alt="">-->
+    <!--            </div>-->
+    <!--            <div class="search-itemDto-center">-->
+    <!--                <div>Apple 아이맥 27형 2020년형 (MXWT2KH/A)</div>-->
+    <!--                <div class="price">-->
+    <!--                    2,289,780-->
+    <!--                    <span class="unit">원</span>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="search-itemDto-right">-->
+    <!--                <img src="images/icon-save.png" alt="" onclick='addProduct()'>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div id="container" class="popup-container">-->
+    <!--        <div class="popup">-->
+    <!--            <button id="close" class="close">-->
+    <!--                X-->
+    <!--            </button>-->
+    <!--            <h1>⏰최저가 설정하기</h1>-->
+    <!--            <p>최저가를 설정해두면 선택하신 상품의 최저가가 떴을 때<br/> 표시해드려요!</p>-->
+    <!--            <div>-->
+    <!--                <input type="text" id="myprice" placeholder="200,000">원-->
+    <!--            </div>-->
+    <!--            <button class="cta" onclick="setMyprice()">설정하기</button>-->
+    <!--        </div>-->
+    <!--    </div>-->
+</div>
+</body>
+</html>
