@@ -19,14 +19,15 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'org.json', name: 'json', version: '20160810'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
+    implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
+    implementation group: 'org.json', name: 'json', version: '20220320'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.7'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.6.7'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
     runtimeOnly 'com.h2database:h2'
-    runtimeOnly 'mysql:mysql-connector-java'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.29'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.7'
 }
 
 tasks.named('test') {

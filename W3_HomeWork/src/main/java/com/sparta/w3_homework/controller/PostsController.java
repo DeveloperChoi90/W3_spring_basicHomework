@@ -26,7 +26,7 @@ public class PostsController {
 
     // 전체 게시글 조회 API
     @GetMapping("/api/posts")
-    public List<PostsRequestDto> readPosts(){
+    public List<Posts> readPosts(){
         return PostsRepository.findAllByOrderByModifiedAtDesc();
     }
 
@@ -46,6 +46,4 @@ public class PostsController {
     public boolean deletePosts(@PathVariable Long id, @RequestBody PostsUpdateDto postsUpdateDto) {
         return PostsService.delete(id, postsUpdateDto);
     }
-
-
 }
