@@ -67,7 +67,7 @@
         }
 
         function isValidContents(contents) {
-            if (contents == '') {
+            if (contents === '') {
                 alert('내용을 입력해주세요');
                 return false;
             }
@@ -93,7 +93,7 @@
         function writePost() {
             let contents = $('#contents').val();
 
-            if (isValidContents(contents) == false) {
+            if (isValidContents(contents) === false) {
                 return;
             }
 

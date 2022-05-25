@@ -141,8 +141,6 @@ function showProduct() {
             }
         }
     })
-
-
 }
 
 function addProductItem(product) {
