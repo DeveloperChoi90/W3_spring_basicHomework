@@ -11,5 +11,4 @@ public class W3HomeWorkApplication {
     public static void main(String[] args) {
         SpringApplication.run(W3HomeWorkApplication.class, args);
     }
-
 }
