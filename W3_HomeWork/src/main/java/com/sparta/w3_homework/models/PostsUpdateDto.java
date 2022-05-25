@@ -1,11 +1,13 @@
 package com.sparta.w3_homework.models;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
+@RequiredArgsConstructor
 public class PostsUpdateDto {
-    private String userName;
-    private String password;
-    private String title;
-    private String content;
+    private final String userName;
+    private final String password;
+    private final String title;
+    private final String content;
 }
