@@ -17,7 +17,7 @@ public class SearchRequestController {
 
     private final NaverShopSearch naverShopSearch;
 
-    @GetMapping("/api/search")
+    @GetMapping("/api/search/")
     public List<ItemDto> getItems(@RequestParam String query){ // RequestParam -> ?뒤의 파라미터를 얻기위해서/ ?name 과 변수명이 같아야한다.
         String resultString = naverShopSearch.search(query);
         return naverShopSearch.fromJSONItem(resultString);
