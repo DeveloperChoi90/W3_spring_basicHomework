@@ -2,7 +2,7 @@ package com.sparta.w3_homework.service;
 
 import com.sparta.w3_homework.models.Posts;
 import com.sparta.w3_homework.models.PostsRepository;
-import com.sparta.w3_homework.models.PostsUpdateDto;
+import com.sparta.w3_homework.models.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +15,10 @@ public class PostsService {
     private final PostsRepository PostsRepository;
 
     @Transactional
-    public boolean update(Long id, PostsUpdateDto postsUpdateDto){ // pw를 보내야 하나?
+    public boolean update(Long id, PostsResponseDto postsResponseDto){
         Posts posts = PostsRepository.findById(id).orElseThrow();
-        if(postsUpdateDto.getPassword().equals(posts.getPassword())){
-            posts.update(postsUpdateDto);
+        if(postsResponseDto.getPassword().equals(posts.getPassword())){
+            posts.update(postsResponseDto);
             return true;
         }else {
             return false;
@@ -26,9 +26,9 @@ public class PostsService {
     }
 
     @Transactional
-    public boolean delete(Long id, PostsUpdateDto postsUpdateDto){ // pw를 보내야 하나?
+    public boolean delete(Long id, PostsResponseDto postsResponseDto){
         Posts posts = PostsRepository.findById(id).orElseThrow();
-        if(postsUpdateDto.getPassword().equals(posts.getPassword())){
+        if(postsResponseDto.getPassword().equals(posts.getPassword())){
             PostsRepository.deleteById(id);
             return true;
         }else {
